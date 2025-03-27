@@ -53,7 +53,6 @@ Developed in VS Code with:
 - CSS3
 - PHP
 - MySQL
-- Web Audio API
 
 ## Future Improvements
 - Implement requestAnimationFrame() for smoother animation
