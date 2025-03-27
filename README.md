@@ -1,32 +1,77 @@
-# Html5-canvas-game
- 
-Code
+# Canvas Game with Persistent Data - Ocean Adventure
 
-Templated code: 
-https://users.aber.ac.uk/eds/CS25320_teaching_materials/2022/falling_stuff.html
+![Game Screenshot](https://users.aber.ac.uk/eds/CS25320_teaching_materials/2022/falling_stuff.html)
 
-Player Image: 
-https://stackoverflow.com/questions/62616484/im-trying-to-put-an-image-for-a-player-on-an-html5-canvas-in-a-io-game
+A horizontally-scrolling ocean-themed game where players avoid sharks and collect treasure, featuring persistent leaderboard data.
 
-Page resizing: 
-https://h3manth.com/content/html5-canvas-full-screen-and-full-page#:~:text=Code
+## Table of Contents
+1. [Overview](#overview)
+2. [Features](#features)
+3. [Installation](#installation)
+4. [How to Play](#how-to-play)
+5. [Development](#development)
+6. [Technologies Used](#technologies-used)
+7. [Future Improvements](#future-improvements)
+8. [Credits](#credits)
 
-Collision boundary between circles:
-https://www.youtube.com/watch?v=rtBCVe3j_24
+## Overview
+This game transforms the original falling_stuff.html concept into an underwater adventure. Instead of vertically falling objects, players navigate horizontally moving sea creatures, collecting coins while avoiding sharks.
 
+## Features
+- 🎮 Interactive canvas gameplay
+- 🦈 Shark enemies with collision detection
+- 💰 Collectible coins for scoring
+- ❤️ Health power-ups
+- 🎵 Background music and sound effects
+- 📊 Persistent leaderboard (PHP/MySQL)
+- 📱 Responsive design with fullscreen option
+- ℹ️ Help and About pages
 
-Images
+## Installation
+1. Clone the repository to your web server
+2. Ensure PHP and MySQL are configured
+3. Set up the database using the provided SQL schema
+4. Update database connection details in `leaderboard.php`
+5. Set proper file permissions (`fixwebperms` recommended)
 
-Header image: 
-https://unsplash.com/photos/9kSZdpIf_Fo
+## How to Play
+1. Use mouse movement to control your fish
+2. Avoid sharks (3 hits ends the game)
+3. Collect gold coins for points
+4. Grab purple health power-ups to restore hits
+5. Try to achieve the highest score!
 
-Background image:
-https://www.freepik.com/free-vector/coral-reef-ocean-sea-underwater-background_22753076.htm#query=parallax%20background%20underwater&position=12&from_view=search&track=sph 
+## Development
+Developed in VS Code with:
+- LiveServer extension for testing
+- Prettier for code formatting
+- Chrome Developer Tools for debugging
 
-Sounds
+## Technologies Used
+- HTML5 Canvas
+- JavaScript (ES6)
+- CSS3
+- PHP
+- MySQL
+- Web Audio API
 
-Backgorund music: 
-Gone Fishin'
+## Future Improvements
+- Implement requestAnimationFrame() for smoother animation
+- Add object removal on collision
+- Develop level progression system
+- Improve leaderboard functionality
+- Enhance graphics quality
 
-Hit sound for collision: 
-https://opengameart.org/content/hit-sound-effects
+## Credits
+**Code References:**
+- Collision detection: [YouTube Tutorial](https://www.youtube.com/watch?v=rtBCVe3j_24)
+- Fullscreen implementation: [h3manth.com](https://h3manth.com/content/html5-canvas-full-screen-and-full-page)
+- Canvas image rendering: [StackOverflow](https://stackoverflow.com/questions/62616484/im-trying-to-put-an-image-for-a-player-on-an-html5-canvas-in-a-io-game)
+
+**Assets:**
+- Background music: "Gone Fishin'"
+- Sound effects: [OpenGameArt](https://opengameart.org/content/hit-sound-effects)
+- Background image: [Freepik](https://www.freepik.com/free-vector/coral-reef-ocean-sea-underwater-background_22753076.htm)
+- Header image: [Unsplash](https://unsplash.com/photos/9kSZdpIf_Fo)
+
+University of Aberystwyth - CS25320 Coursework 2022-23
