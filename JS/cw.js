@@ -29,8 +29,8 @@
         canv.addEventListener("touchmove",seen_touch_motion, false);
        
         //backgorund sound for game 
-        let mySound = new Audio('fishAudio.mp3'); // Gone Fishin'
-        let hitSound = new Audio('hit.mp3'); // https://opengameart.org/content/hit-sound-effects
+        let mySound = new Audio('../Audio/fishAudio.mp3'); // Gone Fishin'
+        let hitSound = new Audio('../Audio/hit.mp3'); // https://opengameart.org/content/hit-sound-effects
        
 
         //constructor for a player class 
@@ -46,7 +46,7 @@
                 this.draw = function (ctx) {
                     
                     var image = new Image();
-                    image.src = "fishy1.png"; //player image 
+                    image.src = "../Img/fishy1.png"; //player image 
                     image.onload = () => {
                     ctx.drawImage(image,this.x,this.y); // image has loaded and can be drawn
                 }
@@ -227,7 +227,7 @@
 
                     this.draw = function (ctx) {
                             var image = new Image(); //assigns the image to each object 
-                            image.src = "shark.png";
+                            image.src = "../Img/shark.png";
                    
                             image.onload = () => { //if image is successfully loaded 
                             ctx.drawImage(image,this.x,this.y); // image has loaded and can be drawn

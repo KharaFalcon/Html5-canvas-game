@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fish Survival</title>
+    <link rel="stylesheet" href="../Styles/cw.css">
+
+    <!-- Load JavaScript Files -->
+    <script src="../JS/cw.js" defer></script>
+    <script src="../JS/fishGameLeaderboard.js" defer></script>
+    
+    <!-- Debugging Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("HTML fully loaded!");
+            if (window.falling_stuff_namespace) {
+                console.log("falling_stuff_namespace is loaded.");
+            } else {
+                console.error("falling_stuff_namespace is NOT defined.");
+            }
+
+            if (window.fishGameLeaderboard_namespace) {
+                console.log("fishGameLeaderboard_namespace is loaded.");
+                // Display leaderboard after the page has fully loaded
+                fishGameLeaderboard_namespace.display_leaderboard();
+            } else {
+                console.error("fishGameLeaderboard_namespace is NOT defined.");
+            }
+        });
+    </script>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Fishin' for Gold</h1>
+    </div>
+
+    <div class="menuNav">
+        <a class="active" href="Fallingstuff.html">Home</a>
+        <a href="instructions.html">Instructions</a>
+        <a href="fishGameLeaderboard.html">Leaderboard</a>
+        <a href="aboutFG.html">About</a>
+    </div>
+
+    <h2>Welcome!</h2>
+    <ul>
+        <li>Press the "Start Game" button below to begin.</li>
+        <li>Check the instructions on the left side of the page.</li>
+        <li>Full-screen mode is recommended for the best gameplay experience.</li>
+    </ul>
+
+    <canvas id="game_canvas" width="800" height="500" style="border: 1px dotted;"></canvas>
+
+    <form id="Game_Controls">
+        <h2>Game Controls</h2>
+        <input type="button" id="startbtn" value="Start Game" onclick="falling_stuff_namespace.start_game()">
+        <input type="button" id="endbtn" value="End Game" onclick="falling_stuff_namespace.stop_game()">
+        <input type="button" id="mute" value="Mute Sound" onclick="falling_stuff_namespace.mute_sound()">
+        <input type="button" id="playsd" value="Play Sound and Effects" onclick="falling_stuff_namespace.play_sound()">
+        <input type="button" id="fullsc" value="Make Full Screen" onclick="falling_stuff_namespace.full_screen()">
+        <input type="button" id="reducesc" value="Reduce Screen" onclick="falling_stuff_namespace.reduce_screen()">
+        <input type="button" id="mutesfx" value="Mute Sound Effects" onclick="falling_stuff_namespace.mutesfx()">
+    </form>
+
+    <h2>High Score</h2>
+    <p>Enter your name: <input id="player_name" type="text"></p>
+    <p id="response"></p>
+
+    <table id="leaderboard">
+        <caption>Top Scores</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Regina</td>
+                <td>500</td>
+            </tr> <!-- Example entry -->
+        </tbody>
+        <tbody id="top_scores1"></tbody>
+    </table>
+
+    <input type="button" id="sendscore" value="Send Score" onclick="fishGameLeaderboard_namespace.save_score()">
+
+    <script>
+        // Ensure that the falling_stuff_namespace and fishGameLeaderboard_namespace are loaded and available for the game
+        window.addEventListener("load", function() {
+            if (typeof falling_stuff_namespace !== 'undefined') {
+                console.log("falling_stuff_namespace is available");
+                // You can initialize your game here if needed
+            }
+            if (typeof fishGameLeaderboard_namespace !== 'undefined') {
+                console.log("fishGameLeaderboard_namespace is available");
+                // Call any initial methods for leaderboard or game here
+            }
+        });
+    </script>
+
+</body>
+</html>
