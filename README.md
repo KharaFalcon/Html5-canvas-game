@@ -32,7 +32,7 @@ This game transforms the original falling_stuff.html concept into an underwater 
 2. Ensure PHP and MySQL are configured
 3. Set up the database using the provided SQL schema
 4. Update database connection details in `leaderboard.php`
-5. Set proper file permissions (`fixwebperms` recommended)
+5. Set proper file permissions
 
 ## How to Play
 1. Use mouse movement to control your fish
